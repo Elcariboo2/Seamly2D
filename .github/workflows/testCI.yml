@@ -68,7 +68,7 @@ jobs:
           if-no-files-found: error
   build-msvc:
     name: Build windows msvc 2019 x64
-    runs-on: windows-latest
+    runs-on: windows-2019
     steps:
       - name: download and extract
         run: |
@@ -93,7 +93,7 @@ jobs:
           if-no-files-found: error
   build-mingw:
     name: Build windows mingw x64
-    runs-on: windows-latest
+    runs-on: windows-2019
     steps:
       - name: download and extract
         run: |
