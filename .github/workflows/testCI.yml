@@ -18,8 +18,8 @@ jobs:
     steps:
       - name: download and extract
         run: |
-          curl --output xerces-c-3.2.4.tar.gz https://dlcdn.apache.org/xerces/c/3/sources/xerces-c-3.3.0.tar.gz
-          tar xf xerces-c-3.2.4.tar.gz
+          curl --output xerces-c-3.3.0.tar.gz https://dlcdn.apache.org/xerces/c/3/sources/xerces-c-3.3.0.tar.gz
+          tar xf xerces-c-3.3.0.tar.gz
       - name: build
         run: |
           sudo xcode-select -s /Applications/Xcode_12.4.app
@@ -44,8 +44,8 @@ jobs:
     steps:
       - name: download and extract
         run: |
-          curl --output xerces-c-3.2.4.tar.gz https://dlcdn.apache.org/xerces/c/3/sources/xerces-c-3.3.0.tar.gz
-          tar xf xerces-c-3.2.4.tar.gz
+          curl --output xerces-c-3.3.0.tar.gz https://dlcdn.apache.org/xerces/c/3/sources/xerces-c-3.3.0.tar.gz
+          tar xf xerces-c-3.3.0.tar.gz
       - name: build
         run: |
           cd xerces-c-3.2.4
@@ -72,8 +72,8 @@ jobs:
     steps:
       - name: download and extract
         run: |
-          curl --output xerces-c-3.2.4.tar.gz https://dlcdn.apache.org/xerces/c/3/sources/xerces-c-3.3.0.tar.gz
-          tar xf xerces-c-3.2.4.tar.gz
+          curl --output xerces-c-3.3.0.tar.gz https://dlcdn.apache.org/xerces/c/3/sources/xerces-c-3.3.0.tar.gz
+          tar xf xerces-c-3.3.0.tar.gz
       - name: build
         run: |
           cd xerces-c-3.2.4
@@ -97,8 +97,8 @@ jobs:
     steps:
       - name: download and extract
         run: |
-          curl --output xerces-c-3.2.4.tar.gz https://dlcdn.apache.org/xerces/c/3/sources/xerces-c-3.3.0.tar.gz
-          tar xf xerces-c-3.2.4.tar.gz
+          curl --output xerces-c-3.3.0.tar.gz https://dlcdn.apache.org/xerces/c/3/sources/xerces-c-3.3.0.tar.gz
+          tar xf xerces-c-3.3.0.tar.gz
       - name: build
         run: |
           cd xerces-c-3.2.4
