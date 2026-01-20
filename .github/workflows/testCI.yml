@@ -40,7 +40,7 @@ jobs:
 
   build-linux:
     name: Build linux x64
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     steps:
       - name: download and extract
         run: |
@@ -55,7 +55,7 @@ jobs:
       - name: infos
         run: |
           ls -l xerces-c-3.3.0/dist/usr/local/lib/
-          ldd xerces-c-3.3.0/dist/usr/local/lib/libxerces-c-3.2.so
+          ldd xerces-c-3.3.0/dist/usr/local/lib/libxerces-c-3.3.so
       - name: package
         run: |
           cd xerces-c-3.3.0/dist/usr/local
@@ -68,7 +68,7 @@ jobs:
           if-no-files-found: error
   build-msvc:
     name: Build windows msvc 2019 x64
-    runs-on: windows-2019
+    runs-on: windows-latest
     steps:
       - name: download and extract
         run: |
@@ -82,7 +82,7 @@ jobs:
           cmake --build . --config Release --target install
       - name: package
         run: |
-          Copy-Item "C:\Program Files (x86)\xerces-c\bin\xerces-c_3_2.dll" -Destination "C:\Program Files (x86)\xerces-c\lib"
+          Copy-Item "C:\Program Files (x86)\xerces-c\bin\xerces-c_3_3.dll" -Destination "C:\Program Files (x86)\xerces-c\lib"
           Remove-Item -LiteralPath "C:\Program Files (x86)\xerces-c\share" -Force -Recurse
           Remove-Item -LiteralPath "C:\Program Files (x86)\xerces-c\bin" -Force -Recurse
           C:\"Program Files"\7-Zip\7z.exe a xerces-c-3.3.0-windows-msvc-2019-x64.zip C:\"Program Files (x86)"\xerces-c\
@@ -93,7 +93,7 @@ jobs:
           if-no-files-found: error
   build-mingw:
     name: Build windows mingw x64
-    runs-on: windows-2019
+    runs-on: windows-latest
     steps:
       - name: download and extract
         run: |
@@ -136,7 +136,7 @@ jobs:
           name: xerces-c-3.3.0-windows-mingw-x64.zip
       - uses: softprops/action-gh-release@v1
         with:
-          tag_name: "v3.2.4"
+          tag_name: "v3.3.0"
           fail_on_unmatched_files: true
           prerelease: true
           files: |
